@@ -22,8 +22,12 @@ def argmax_rows(matrix):
     return argmax'''
     return np.argmax(matrix, axis=1)
 
-# Step 2 - row_max (not yet solved)
-# TODO: implement
+# Step 2 - row_max
+import numpy as np
+
+def row_max(matrix):
+    # TODO: return the maximum value of each row of `matrix` with keepdims True for broadcasting.
+    return np.max(matrix,axis=1,keepdims=True)
 
 # Step 3 - row_sum (not yet solved)
 # TODO: implement

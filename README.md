@@ -11,7 +11,7 @@ python scaffold.py
 ## Steps
 
 - [x] **1.** argmax_rows
-- [ ] **2.** row_max
+- [x] **2.** row_max
 - [ ] **3.** row_sum
 - [ ] **4.** exp_shifted
 - [ ] **5.** stable_softmax
