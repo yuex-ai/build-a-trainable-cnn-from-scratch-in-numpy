@@ -12,7 +12,7 @@ python scaffold.py
 
 - [x] **1.** argmax_rows
 - [x] **2.** row_max
-- [ ] **3.** row_sum
+- [x] **3.** row_sum
 - [ ] **4.** exp_shifted
 - [ ] **5.** stable_softmax
 - [ ] **6.** one_hot
