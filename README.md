@@ -15,7 +15,7 @@ python scaffold.py
 - [x] **3.** row_sum
 - [x] **4.** exp_shifted
 - [x] **5.** stable_softmax
-- [ ] **6.** one_hot
+- [x] **6.** one_hot
 - [ ] **7.** gather_true_class_probs
 - [ ] **8.** cross_entropy_loss
 - [ ] **9.** accuracy

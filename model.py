@@ -55,8 +55,16 @@ def stable_softmax(logits):
     softmax=logits_exp/np.sum(logits_exp,axis=1,keepdims=True)
     return softmax
 
-# Step 6 - one_hot (not yet solved)
-# TODO: implement
+# Step 6 - one_hot
+def one_hot(labels, num_classes):
+    # TODO: convert integer labels into a (N, num_classes) one-hot float matrix
+    N=len(labels)
+    initial=np.zeros((N,num_classes),dtype=np.float32)
+
+    for i in range(N):
+        label=labels[i]
+        initial[i,label]=1.0
+    return initial
 
 # Step 7 - gather_true_class_probs (not yet solved)
 # TODO: implement
