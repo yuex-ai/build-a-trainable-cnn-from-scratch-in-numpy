@@ -21,7 +21,7 @@ python scaffold.py
 - [x] **9.** accuracy
 - [x] **10.** he_std
 - [x] **11.** he_init
-- [ ] **12.** init_zero_bias
+- [x] **12.** init_zero_bias
 - [ ] **13.** pad_2d
 - [ ] **14.** output_spatial_size
 - [ ] **15.** im2col
