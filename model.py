@@ -157,11 +157,35 @@ def im2col(images, kernel_h, kernel_w, stride, padding):
                 row_idx+=1
     return result
 
-# Step 16 - col2im (not yet solved)
-# TODO: implement
+# Step 16 - col2im
+def col2im(cols, input_shape, kernel_h, kernel_w, stride, padding):
+    # TODO: re-roll a (N*out_h*out_w, C*kh*kw) column matrix back into a (N, C, H, W) tensor
+    N, C, H, W = input_shape
+    output_h = (H - kernel_h + padding * 2) // stride + 1
+    output_w = (W - kernel_w + padding * 2) // stride + 1
+    padded_H=H+2*padding
+    padded_W=W+2*padding
+    grad_padded=np.zeros((N,C,padded_H,padded_W),dtype=cols.dtype)
+    idx=0
+    for n in range(N):
+        for h_out in range(output_h):
+            for w_out in range(output_w):
+                h_start=h_out*stride
+                w_start=w_out*stride
+                patch_flat=cols[idx,:]
+                patch=patch_flat.reshape(C,kernel_h,kernel_w)
+                grad_padded[n,:,h_start:h_start+kernel_h,w_start:w_start+kernel_w]+=patch
+                idx+=1
+    grad=grad_padded[:,:,padding:padding+H,padding:padding+W]
+    return grad
 
-# Step 17 - conv2d_forward (not yet solved)
-# TODO: implement
+# Step 17 - conv2d_forward
+def conv2d_forward(x, weights, bias, stride, padding):
+    # TODO: convolve x with weights using im2col, add bias, return output and a backprop cache.
+    kernel_h=2
+    kernel_w=2
+    x=im2col(x,kernel_h,kernel_w,stride,padding):
+    y=np.matmul(x,w,keepdims=True)+b
 
 # Step 18 - conv2d_grad_input (not yet solved)
 # TODO: implement
