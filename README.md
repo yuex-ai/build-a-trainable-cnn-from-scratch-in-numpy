@@ -28,7 +28,7 @@ python scaffold.py
 - [x] **16.** col2im
 - [x] **17.** conv2d_forward
 - [x] **18.** conv2d_grad_input
-- [ ] **19.** conv2d_grad_weights
+- [x] **19.** conv2d_grad_weights
 - [ ] **20.** conv2d_grad_bias
 - [ ] **21.** conv2d_backward
 - [ ] **22.** maxpool2d_forward
