@@ -241,8 +241,14 @@ def conv2d_grad_bias(d_out):
     d_b=np.sum(d_out,axis=(0,2,3))
     return d_b
 
-# Step 21 - conv2d_backward (not yet solved)
-# TODO: implement
+# Step 21 - conv2d_backward
+def conv2d_backward(d_out, cache):
+    # TODO: return (dx, dW, db) using the conv2d gradient helpers and the forward cache
+    dx = conv2d_grad_input(d_out, cache)       # (N, C_in, H, W)
+    dW = conv2d_grad_weights(d_out, cache)     # (C_out, C_in, kH, kW)
+    db = conv2d_grad_bias(d_out)            # (C_out,)
+
+    return dx, dW, db
 
 # Step 22 - maxpool2d_forward (not yet solved)
 # TODO: implement
