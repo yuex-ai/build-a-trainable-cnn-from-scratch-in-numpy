@@ -33,7 +33,7 @@ python scaffold.py
 - [x] **21.** conv2d_backward
 - [x] **22.** maxpool2d_forward
 - [x] **23.** scatter_grad_window
-- [ ] **24.** maxpool2d_backward
+- [x] **24.** maxpool2d_backward
 - [ ] **25.** relu_forward
 - [ ] **26.** relu_backward
 - [ ] **27.** flatten_forward
