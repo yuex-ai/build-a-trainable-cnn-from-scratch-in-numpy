@@ -34,7 +34,7 @@ python scaffold.py
 - [x] **22.** maxpool2d_forward
 - [x] **23.** scatter_grad_window
 - [x] **24.** maxpool2d_backward
-- [ ] **25.** relu_forward
+- [x] **25.** relu_forward
 - [ ] **26.** relu_backward
 - [ ] **27.** flatten_forward
 - [ ] **28.** flatten_backward
