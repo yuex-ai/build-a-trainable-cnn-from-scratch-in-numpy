@@ -37,7 +37,7 @@ python scaffold.py
 - [x] **25.** relu_forward
 - [x] **26.** relu_backward
 - [x] **27.** flatten_forward
-- [ ] **28.** flatten_backward
+- [x] **28.** flatten_backward
 - [ ] **29.** linear_forward
 - [ ] **30.** linear_grad_input
 - [ ] **31.** linear_grad_weights
