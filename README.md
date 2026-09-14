@@ -50,7 +50,7 @@ python scaffold.py
 - [x] **38.** adam_update_v
 - [x] **39.** adam_bias_correct
 - [x] **40.** adam_param_step
-- [ ] **41.** adam_step
+- [x] **41.** adam_step
 - [ ] **42.** init_conv_layer
 - [ ] **43.** init_linear_layer
 - [ ] **44.** init_lenet
