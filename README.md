@@ -40,7 +40,7 @@ python scaffold.py
 - [x] **28.** flatten_backward
 - [x] **29.** linear_forward
 - [x] **30.** linear_grad_input
-- [ ] **31.** linear_grad_weights
+- [x] **31.** linear_grad_weights
 - [ ] **32.** linear_grad_bias
 - [ ] **33.** linear_backward
 - [ ] **34.** softmax_cross_entropy_forward
