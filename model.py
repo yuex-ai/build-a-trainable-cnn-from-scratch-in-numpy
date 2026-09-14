@@ -433,8 +433,13 @@ def adam_bias_correct(moment, beta, t):
     moment_new=moment/(1-beta**t)
     return moment_new
 
-# Step 40 - adam_param_step (not yet solved)
-# TODO: implement
+# Step 40 - adam_param_step
+import numpy as np
+
+def adam_param_step(param, m_hat, v_hat, lr, eps):
+    # TODO: apply one Adam parameter update using bias-corrected moments
+    param_new=param-lr*(m_hat)/(np.sqrt(v_hat)+eps)
+    return param_new
 
 # Step 41 - adam_step (not yet solved)
 # TODO: implement
