@@ -378,8 +378,14 @@ def linear_grad_bias(dout):
     db=np.sum(dout,axis=0)
     return db
 
-# Step 33 - linear_backward (not yet solved)
-# TODO: implement
+# Step 33 - linear_backward
+def linear_backward(dout, cache):
+    # TODO: combine input, weight, and bias gradients for a linear layer using the cache
+    
+    dx=linear_grad_input(dout,cache)
+    dw=linear_grad_weights(x,dout)
+    db=linear_grad_bias(dout)
+    return dx,dw,db
 
 # Step 34 - softmax_cross_entropy_forward (not yet solved)
 # TODO: implement
