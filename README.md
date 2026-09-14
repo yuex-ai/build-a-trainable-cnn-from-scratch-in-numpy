@@ -46,7 +46,7 @@ python scaffold.py
 - [x] **34.** softmax_cross_entropy_forward
 - [x] **35.** softmax_cross_entropy_backward
 - [x] **36.** sgd_step
-- [ ] **37.** adam_update_m
+- [x] **37.** adam_update_m
 - [ ] **38.** adam_update_v
 - [ ] **39.** adam_bias_correct
 - [ ] **40.** adam_param_step
