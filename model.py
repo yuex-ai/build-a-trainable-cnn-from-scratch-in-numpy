@@ -424,7 +424,7 @@ import numpy as np
 
 def adam_update_v(v, grad, beta_two):
     # TODO: return the updated Adam second moment estimate as an EMA of squared gradients.
-    v_new=beta_two*v+(1-beta_two)*grad**2
+    v_new=beta_two*v+(1-beta_two)*(grad**2)
     return v_new
 
 # Step 39 - adam_bias_correct (not yet solved)
