@@ -44,7 +44,7 @@ python scaffold.py
 - [x] **32.** linear_grad_bias
 - [x] **33.** linear_backward
 - [x] **34.** softmax_cross_entropy_forward
-- [ ] **35.** softmax_cross_entropy_backward
+- [x] **35.** softmax_cross_entropy_backward
 - [ ] **36.** sgd_step
 - [ ] **37.** adam_update_m
 - [ ] **38.** adam_update_v
