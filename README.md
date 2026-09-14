@@ -41,7 +41,7 @@ python scaffold.py
 - [x] **29.** linear_forward
 - [x] **30.** linear_grad_input
 - [x] **31.** linear_grad_weights
-- [ ] **32.** linear_grad_bias
+- [x] **32.** linear_grad_bias
 - [ ] **33.** linear_backward
 - [ ] **34.** softmax_cross_entropy_forward
 - [ ] **35.** softmax_cross_entropy_backward
