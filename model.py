@@ -340,11 +340,26 @@ def flatten_backward(d_out, cache):
     dx=d_out.reshape(N,C,H,W)
     return dx
 
-# Step 29 - linear_forward (not yet solved)
-# TODO: implement
+# Step 29 - linear_forward
+def linear_forward(x, weights, bias):
+    # TODO: compute X @ W + b and cache the inputs needed for backprop.
+    out=x@weights+bias
+    cache={
+        'x':x,
+        'weights':weights
+    }
+    return out,cache
 
-# Step 30 - linear_grad_input (not yet solved)
-# TODO: implement
+# Step 30 - linear_grad_input
+import numpy as np
+
+def linear_grad_input(d_out, cache):
+    """Gradient of a linear layer w.r.t. its input X."""
+    # TODO: return dL/dX given d_out (N, D_out) and cache['weights'] (D_in, D_out)
+    weights=cache['weights']
+    N,D_out=d_out.shape
+    dx=d_out@weights.T
+    return dx
 
 # Step 31 - linear_grad_weights (not yet solved)
 # TODO: implement
