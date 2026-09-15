@@ -83,7 +83,7 @@ def cross_entropy_loss(probs, labels, eps=1e-12):
     correct_p=np.clip(correct_p,eps,1)
     p_log=np.log(correct_p)
     p_log_mean=-np.mean(p_log)
-    return round(p_log_mean,4)
+    return p_log_mean
 
 # Step 9 - accuracy
 def accuracy(logits_or_probs, labels):
@@ -576,8 +576,26 @@ def backward_classifier_block(dlogits, cache):
     }
     return grad
 
-# Step 50 - lenet_backward (not yet solved)
-# TODO: implement
+# Step 50 - lenet_backward
+def lenet_backward(dlogits, caches):
+    # TODO: walk classifier and conv block caches in reverse to assemble all gradients
+    block1=caches['block1']
+    block2=caches['block2']
+    classifier=caches['classifier']
+    grad=backward_classifier_block(dlogits,classifier)
+    dx,dW2,db2=backward_conv_block(grad['dx'],block2)
+    dx,dW1,db1=backward_conv_block(dx,block1)
+    dict={
+        'conv1':{
+            'dW':dW1,'db':db1
+        },
+        'conv2':{
+            'dW':dW2,'db':db2
+        },
+        'fc1':grad['fc1'],
+        'fc2':grad['fc2']
+    }
+    return dict
 
 # Step 51 - lenet_predict (not yet solved)
 # TODO: implement
