@@ -61,7 +61,7 @@ python scaffold.py
 - [x] **49.** backward_classifier_block
 - [x] **50.** lenet_backward
 - [x] **51.** lenet_predict
-- [ ] **52.** build_synthetic_image_dataset
+- [x] **52.** build_synthetic_image_dataset
 - [ ] **53.** shuffle_indices
 - [ ] **54.** train_test_split
 - [ ] **55.** iterate_minibatches
