@@ -644,8 +644,28 @@ def iterate_minibatches(x, y, batch_size, seed=0):
         idx=pi[k*B:(k+1)*B]
         yield x[idx],y[idx]
 
-# Step 56 - train_step (not yet solved)
-# TODO: implement
+# Step 56 - train_step
+def train_step(params, opt_state, xb, yb, lr, beta_one, beta_two, eps, step):
+    # TODO: Run forward + loss + backward and apply one Adam update to every parameter.
+    out,cache=lenet_forward(xb,params)
+    loss=softmax_cross_entropy_forward(out,yb)
+    dlogits=softmax_cross_entropy_backward(out,yb)
+    grads=lenet_backward(dlogits,cache)
+    new_params={}
+    new_opt_state={}
+    for layer in params:
+        new_params[layer]={}
+        new_opt_state[layer]={}
+        for pkey in params[layer]:
+            grad_key='d'+pkey
+            p=params[layer][pkey]
+            g=grads[layer][grad_key]
+            m = opt_state[layer][pkey]['m']
+            v = opt_state[layer][pkey]['v']
+            new_p,new_m,new_v=adam_step(p,g,m,v,step,lr,beta_one,beta_two,eps)
+            new_params[layer][pkey]=new_p
+            new_opt_state[layer][pkey] = {'m': new_m, 'v': new_v} 
+    return new_params,new_opt_state,loss
 
 # Step 57 - train_one_epoch (not yet solved)
 # TODO: implement
