@@ -67,7 +67,7 @@ python scaffold.py
 - [x] **55.** iterate_minibatches
 - [x] **56.** train_step
 - [x] **57.** train_one_epoch
-- [ ] **58.** train_loop
+- [x] **58.** train_loop
 - [ ] **59.** evaluate
 
 ---
