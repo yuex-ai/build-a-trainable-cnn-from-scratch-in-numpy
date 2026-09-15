@@ -506,8 +506,20 @@ def forward_conv_block(x, W, b, pool_size, stride, pad):
     }
     return x_pool,dict
 
-# Step 46 - forward_classifier_block (not yet solved)
-# TODO: implement
+# Step 46 - forward_classifier_block
+def forward_classifier_block(x, fc1, fc2):
+    # TODO: run flatten -> linear -> relu -> linear and return logits plus a cache dict.
+    x_flatten,flatten_cache=flatten_forward(x)
+    linear1,fc1_cache=linear_forward(x_flatten,fc1['W'],fc1['b'])
+    x_relu,relu_cache=relu_forward(linear1)
+    linear2,fc2_cache=linear_forward(x_relu,fc2['W'],fc2['b'])
+    cache={
+        'fc1_cache':fc1_cache,
+        'fc2_cache':fc2_cache,
+        'flatten_cache':flatten_cache,
+        'relu_cache':relu_cache
+    }
+    return linear2,cache
 
 # Step 47 - lenet_forward (not yet solved)
 # TODO: implement
