@@ -62,7 +62,7 @@ python scaffold.py
 - [x] **50.** lenet_backward
 - [x] **51.** lenet_predict
 - [x] **52.** build_synthetic_image_dataset
-- [ ] **53.** shuffle_indices
+- [x] **53.** shuffle_indices
 - [ ] **54.** train_test_split
 - [ ] **55.** iterate_minibatches
 - [ ] **56.** train_step
