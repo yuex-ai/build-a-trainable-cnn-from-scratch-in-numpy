@@ -478,8 +478,20 @@ def init_linear_layer(in_features, out_features, seed=0):
     }
     return dict
 
-# Step 44 - init_lenet (not yet solved)
-# TODO: implement
+# Step 44 - init_lenet
+def init_lenet(in_channels, num_classes, seed=0):
+    # TODO: build conv1, conv2, fc1, fc2 with the right shapes and return them in a dict.
+    conv1=init_conv_layer(6,in_channels,5)
+    conv2=init_conv_layer(16,6,5)
+    fc1=init_linear_layer(256,120)
+    fc2=init_linear_layer(120,num_classes)
+    dict={
+        'conv1':conv1,
+        'conv2':conv2,
+        'fc1':fc1,
+        'fc2':fc2
+    }
+    return dict
 
 # Step 45 - forward_conv_block (not yet solved)
 # TODO: implement
