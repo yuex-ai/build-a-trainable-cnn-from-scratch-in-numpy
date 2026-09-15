@@ -58,7 +58,7 @@ python scaffold.py
 - [x] **46.** forward_classifier_block
 - [x] **47.** lenet_forward
 - [x] **48.** backward_conv_block
-- [ ] **49.** backward_classifier_block
+- [x] **49.** backward_classifier_block
 - [ ] **50.** lenet_backward
 - [ ] **51.** lenet_predict
 - [ ] **52.** build_synthetic_image_dataset

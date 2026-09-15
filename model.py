@@ -381,7 +381,7 @@ def linear_grad_bias(dout):
 # Step 33 - linear_backward
 def linear_backward(dout, cache):
     # TODO: combine input, weight, and bias gradients for a linear layer using the cache
-    
+    x=cache['x']
     dx=linear_grad_input(dout,cache)
     dw=linear_grad_weights(x,dout)
     db=linear_grad_bias(dout)
@@ -552,8 +552,29 @@ def backward_conv_block(dout, cache):
     dx,dW,db=conv2d_backward(dout_relu,conv_cache)
     return dx,dW,db
 
-# Step 49 - backward_classifier_block (not yet solved)
-# TODO: implement
+# Step 49 - backward_classifier_block
+def backward_classifier_block(dlogits, cache):
+    # TODO: backprop through fc2 -> relu -> fc1 -> flatten using the cached values
+    fc1_cache=cache['fc1_cache']
+    fc2_cache=cache['fc2_cache']
+    flatten_cache=cache['flatten_cache']
+    relu_cache=cache['relu_cache']
+    dx,dw_2,db_2=linear_backward(dlogits,fc2_cache)
+    dx=relu_backward(dx,relu_cache)
+    dx,dw_1,db_1=linear_backward(dx,fc2_cache)
+    dx=flatten_backward(dx,flatten_cache)
+    grad={
+        'dx':dx,
+        'fc1':{
+            'dW':dw_1,
+            'db':db_1
+        },
+        'fc2':{
+            'dW':dw_2,
+            'db':db_2
+        }
+    }
+    return out,grad
 
 # Step 50 - lenet_backward (not yet solved)
 # TODO: implement
