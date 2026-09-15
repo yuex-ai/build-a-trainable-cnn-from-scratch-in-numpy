@@ -700,6 +700,10 @@ def train_loop(params, x_train, y_train, num_epochs, batch_size, lr=1e-3, beta_o
         all_losses.extend(losses)            
     return params, all_losses
 
-# Step 59 - evaluate (not yet solved)
-# TODO: implement
+# Step 59 - evaluate
+def evaluate(params, x, y):
+    # TODO: return the fraction of samples whose predicted class equals the label.
+    preds=lenet_predict(x,params)
+    acc=np.mean(preds==y)
+    return float(acc)
 

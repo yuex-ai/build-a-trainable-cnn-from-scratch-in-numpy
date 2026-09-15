@@ -68,7 +68,7 @@ python scaffold.py
 - [x] **56.** train_step
 - [x] **57.** train_one_epoch
 - [x] **58.** train_loop
-- [ ] **59.** evaluate
+- [x] **59.** evaluate
 
 ---
 
