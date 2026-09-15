@@ -466,8 +466,17 @@ def init_conv_layer(out_channels, in_channels, kernel_size, seed=0):
     }
     return dict
 
-# Step 43 - init_linear_layer (not yet solved)
-# TODO: implement
+# Step 43 - init_linear_layer
+def init_linear_layer(in_features, out_features, seed=0):
+    # TODO: return {'W': He-init matrix (in_features, out_features), 'b': zero bias (out_features,)}
+    bias=init_zero_bias(out_features)
+    W_shape=in_features,out_features
+    W=he_init(W_shape,in_features,seed)
+    dict={
+        'W':W,
+        'b':bias
+    }
+    return dict
 
 # Step 44 - init_lenet (not yet solved)
 # TODO: implement
