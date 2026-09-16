@@ -693,7 +693,7 @@ def train_loop(params, x_train, y_train, num_epochs, batch_size, lr=1e-3, beta_o
     all_losses = []
     for epoch in range(num_epochs):
         params, opt_state, step_counter, losses = train_one_epoch(
-            params, opt_state, x, y, batch_size, lr,
+            params, opt_state, x_train, y_train, batch_size, lr,
             beta_one, beta_two, eps, step_counter,
             seed=seed + epoch,               
         )
